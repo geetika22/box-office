@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import ActorGrid from '../components/actors/ActorGrid';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrids from '../components/shows/ShowGrids';
+import { useLastQuery } from '../misc/Custom-hooks';
 
 const Home = () => {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useLastQuery();
     const [results, setResults] =useState(null);
     const [searchOption, setSearchOption] = useState('shows');
 
